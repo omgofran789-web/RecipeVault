@@ -1,0 +1,228 @@
+﻿/* ===== reset & base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f9f7f4;
+  color: #2d2a24;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+  flex: 1;
+}
+
+/* ===== header ===== */
+header {
+  background: #3e2c1b;
+  color: #fff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+nav a {
+  color: #f0e6d8;
+  text-decoration: none;
+  margin: 0 12px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background: #5f4a33;
+  color: #fff;
+}
+
+/* ===== login box ===== */
+.login-box {
+  max-width: 400px;
+  margin: 80px auto;
+  background: #fff;
+  padding: 35px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.login-box h1 {
+  font-size: 2.2rem;
+  margin-bottom: 5px;
+}
+.login-box h2 {
+  font-size: 1.3rem;
+  font-weight: normal;
+  color: #6b5a48;
+  margin-bottom: 25px;
+}
+
+.hint {
+  margin-top: 15px;
+  font-size: 0.85rem;
+  color: #999;
+}
+
+/* ===== input groups ===== */
+.input-group {
+  margin-bottom: 18px;
+  text-align: right;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #3e2c1b;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #b48a5c;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(180, 138, 92, 0.2);
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* ===== buttons ===== */
+.btn-primary {
+  background: #3e2c1b;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background: #5f4a33;
+  transform: scale(1.02);
+}
+
+/* ===== messages ===== */
+.error-message {
+  color: #c0392b;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+.success-message {
+  color: #27ae60;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+/* ===== recipe grid ===== */
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.recipe-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+  border-right: 6px solid #b48a5c;
+  transition: 0.25s;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.recipe-card h3 {
+  color: #3e2c1b;
+  margin-bottom: 6px;
+  font-size: 1.3rem;
+}
+
+.recipe-card .category {
+  font-size: 0.85rem;
+  color: #8a7a6a;
+  margin-bottom: 12px;
+  display: inline-block;
+  background: #efebe6;
+  padding: 3px 12px;
+  border-radius: 20px;
+}
+
+.recipe-card .ingredients {
+  font-size: 0.95rem;
+  color: #4d3f31;
+  margin-bottom: 8px;
+}
+
+.recipe-card .instructions {
+  font-size: 0.9rem;
+  color: #6b5a48;
+  line-height: 1.5;
+}
+
+/* ===== forms (add & contact) ===== */
+.recipe-form,
+.contact-form {
+  max-width: 650px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+/* ===== responsive ===== */
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  nav a {
+    margin: 0 6px;
+    font-size: 0.9rem;
+  }
+  .login-box {
+    margin: 40px auto;
+    padding: 25px;
+  }
+  .recipe-grid {
+    grid-template-columns: 1fr;
+  }
+}
